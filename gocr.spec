@@ -3,14 +3,15 @@
 
 Summary:	Gocr is an OCR (Optical Character Recognition) program
 Name:		gocr
-Version:	0.43
+Version:	0.44
 Release:	%mkrel 1
 License:	GPL
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/jocr/%{name}-%{version}.tar.bz2
-Source1:	%{name}-icons.tar.bz2
-Patch0:		gocr-0.39-includes.patch
+Source0:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz
+Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.asc
+Source2:	%{name}-icons.tar.bz2
+Patch0: 	gocr-0.39-includes.patch
 BuildRequires:	libnetpbm-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 
@@ -54,7 +55,6 @@ install gocr-devel.  You'll also need to install the gocr package.
 #Gtk+-based frontend for gocr.
 	
 %prep
-
 %setup -q
 %patch0 -p1 -b .includes
 
@@ -82,7 +82,7 @@ mv %buildroot/%_prefix/X11R6/bin/* %buildroot/%_bindir
 
 # Menu
 #mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir},%{_menudir}}
-#bzcat %{SOURCE1}|tar xf - -C %buildroot/%{_datadir}
+#bzcat %{SOURCE2}|tar xf - -C %buildroot/%{_datadir}
 
 #cat > %buildroot/%{_menudir}/%{name}-gtk << EOF
 #?package(%{name}-gtk):\
