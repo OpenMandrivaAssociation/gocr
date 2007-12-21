@@ -13,6 +13,7 @@ Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.asc
 Source2:	%{name}-icons.tar.bz2
 Patch0: 	gocr-0.39-includes.patch
 BuildRequires:	libnetpbm-devel
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 GOCR is an optical character recognition program, released under the
