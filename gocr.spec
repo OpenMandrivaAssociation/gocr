@@ -84,15 +84,15 @@ mv %buildroot/%_prefix/X11R6/bin/* %buildroot/%_bindir
 #mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir},%{_menudir}}
 #bzcat %{SOURCE2}|tar xf - -C %buildroot/%{_datadir}
 
-#cat > %buildroot/%{_menudir}/%{name}-gtk << EOF
-#?package(%{name}-gtk):\
-#command="%{_xbindir}/gtk-ocr"\
-#needs="X11"\
-#icon="%{name}.png"\
-#section="Multimedia/Graphics"\
-#title="Gtk-ocr"\
-#longtitle="Gtk-ocr is a gtk frontend for gocr"
-#EOF
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}-gtk.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_xbindir}/gtk-ocr
+Icon=%{name}
+Categories=Graphics;Viewer;
+Name=Gtk-ocr
+Comment=Gtk-ocr is a gtk frontend for gocr
+EOF
 
 #%post -n %name-gtk
 #%{update_menus}
@@ -115,6 +115,7 @@ rm -rf %{buildroot}
 %doc AUTHORS
 %{_libdir}/libPgm2asc.a
 %{_includedir}/gocr.h
+%{_datadir}/applications/mandriva-%{name}-gtk.desktop
 
 #%files -n %{name}-gtk
 #%defattr(-, root, root)
