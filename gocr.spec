@@ -4,7 +4,7 @@
 Summary:	Gocr is an OCR (Optical Character Recognition) program
 Name:		gocr
 Version:	0.44
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
