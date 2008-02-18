@@ -84,6 +84,7 @@ mv %buildroot/%_prefix/X11R6/bin/* %buildroot/%_bindir
 #mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir},%{_menudir}}
 #bzcat %{SOURCE2}|tar xf - -C %buildroot/%{_datadir}
 
+mkdir -p %buildroot%{_datadir}/applications/
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}-gtk.desktop
 [Desktop Entry]
 Type=Application
