@@ -1,7 +1,7 @@
 #%define _xprefix	/usr/X11R6
 #%define _xbindir	%{_xprefix}/bin
 
-Summary:	Gocr is an OCR (Optical Character Recognition) program
+Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
 Version:	0.44
 Release:	%mkrel 2
