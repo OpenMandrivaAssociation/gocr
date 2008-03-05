@@ -3,15 +3,15 @@
 
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
-Version:	0.44
-Release:	%mkrel 3
+Version:	0.45
+Release:	%mkrel 1
 License:	GPL
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
 Source0:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz
 Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.asc
 Source2:	%{name}-icons.tar.bz2
-Patch0: 	gocr-0.39-includes.patch
+#Patch0: 	gocr-0.39-includes.patch
 BuildRequires:	libnetpbm-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 
@@ -56,7 +56,7 @@ install gocr-devel.  You'll also need to install the gocr package.
 	
 %prep
 %setup -q
-%patch0 -p1 -b .includes
+#patch0 -p1 -b .includes
 
 %build
 %configure2_5x
