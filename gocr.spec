@@ -75,8 +75,6 @@ rm -rf %{buildroot}
 
 %makeinstall_std
 
-mkdir -p %buildroot/%_bindir
-mv %buildroot/%_prefix/X11R6/bin/* %buildroot/%_bindir
 #ln -sf gnome/mkinstalldirs frontend/mkinstalldirs
 #make -C frontend/gnome install DESTDIR=%buildroot
 
