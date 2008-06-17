@@ -1,5 +1,5 @@
-#%define _xprefix	/usr/X11R6
-#%define _xbindir	%{_xprefix}/bin
+#define _xprefix	/usr/X11R6
+#define _xbindir	%{_xprefix}/bin
 
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
