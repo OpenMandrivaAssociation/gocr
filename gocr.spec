@@ -67,8 +67,8 @@ install gocr-devel.  You'll also need to install the gocr package.
 ldd src/gocr | grep -q libnetpbm || exit 1
 
 #cd frontend/gnome
-#%configure --prefix=%{_xprefix} --bindir=%{_xbindir}
-#%make 
+#%%configure --prefix=%{_xprefix} --bindir=%{_xbindir}
+#%%make 
 
 %install
 rm -rf %{buildroot}
