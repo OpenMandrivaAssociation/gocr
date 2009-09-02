@@ -4,7 +4,7 @@
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
 Version:	0.45
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPL
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
