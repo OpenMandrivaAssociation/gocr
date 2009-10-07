@@ -1,19 +1,18 @@
-#define _xprefix	/usr/X11R6
-#define _xbindir	%{_xprefix}/bin
-
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
-Version:	0.45
-Release:	%mkrel 4
-License:	GPL
+Version:	0.48
+Release:	%mkrel 1
+License:	GPLv2
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
 Source0:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz
-Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.asc
+Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz.asc
 Source2:	%{name}-icons.tar.bz2
-#Patch0: 	gocr-0.39-includes.patch
+#Patch0:	gocr-0.39-includes.patch
 BuildRequires:	libnetpbm-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot
+
+Obsoletes:	%{name}-devel <= 0.48
 
 %description
 GOCR is an optical character recognition program, released under the
@@ -23,20 +22,20 @@ pnm-tools installed and running linux-like system you can also use
 pnm.gz, pnm.bz2, png, jpg, tiff, gif, bmp and others) and outputs
 a text file.
 
-%package -n	%{name}-devel
-Summary:	Development tools for gocr
-Group:		Development/C
+#%package -n	%{name}-devel
+#Summary:	Development tools for gocr
+#Group:		Development/C
 
-%description -n	%{name}-devel
-GOCR is an optical character recognition program, released under the
-GNU General Public License. It reads images in many formats (pnm, pbm,
-pgm, ppm, some pcx and tga image files (or PNM from stdin); if
-pnm-tools installed and running linux-like system you can also use
-pnm.gz, pnm.bz2, png, jpg, tiff, gif, bmp and others) and outputs
-a text file.
+#%description -n	%{name}-devel
+#GOCR is an optical character recognition program, released under the
+#GNU General Public License. It reads images in many formats (pnm, pbm,
+#pgm, ppm, some pcx and tga image files (or PNM from stdin); if
+#pnm-tools installed and running linux-like system you can also use
+#pnm.gz, pnm.bz2, png, jpg, tiff, gif, bmp and others) and outputs
+#a text file.
 
-If you want to develop programs which will manipulate gocr, you should 
-install gocr-devel.  You'll also need to install the gocr package.
+#If you want to develop programs which will manipulate gocr, you should 
+#install gocr-devel.  You'll also need to install the gocr package.
 
 #%package -n %{name}-gtk
 #Summary:	Gtk+ frontend for gocr
@@ -108,13 +107,13 @@ rm -rf %{buildroot}
 %doc doc/{examples.txt,gocr.html,unicode.txt}
 %{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
-
-%files -n %{name}-devel
-%defattr(-, root, root)
-%doc AUTHORS
-%{_libdir}/libPgm2asc.a
-%{_includedir}/gocr.h
 %{_datadir}/applications/mandriva-%{name}-gtk.desktop
+
+#%files -n %{name}-devel
+#%defattr(-, root, root)
+#%doc AUTHORS
+#%{_libdir}/libPgm2asc.a
+#%{_includedir}/gocr.h
 
 #%files -n %{name}-gtk
 #%defattr(-, root, root)
