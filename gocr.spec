@@ -1,3 +1,5 @@
+%define _disable_ld_as_needed 1
+
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
 Version:	0.48
