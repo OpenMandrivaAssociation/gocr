@@ -1,14 +1,14 @@
 Summary:	OCR (Optical Character Recognition) program
 Name:		gocr
 Version:	0.49
-Release:	2
+Release:	3
 License:	GPLv2
 Group:		Graphics
 URL:		http://jocr.sourceforge.net/
 Source0:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz
 Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz.asc
 Source2:	%{name}-icons.tar.bz2
-BuildRequires:	libnetpbm-devel
+BuildRequires:	netpbm-devel
 
 Obsoletes:	%{name}-devel <= 0.48
 
