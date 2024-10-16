@@ -4,7 +4,7 @@ Version:	0.52
 Release:	11
 License:	GPLv2
 Group:		Graphics
-Url:		http://jocr.sourceforge.net/
+Url:		https://jocr.sourceforge.net/
 Source0:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz
 Source1:	http://www-e.uni-magdeburg.de/jschulen/ocr/gocr-%{version}.tar.gz.asc
 Source2:	%{name}-icons.tar.bz2
